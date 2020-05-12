@@ -1,0 +1,79 @@
+/* Import the mixins collection file... */
+body {
+  position: relative;
+}
+
+body header {
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body header .grid {
+  padding-top: 36px;
+}
+
+body header .grid .links-box {
+  text-align: right;
+}
+
+body .landing {
+  background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg");
+  background-size: 100% 100%;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .landing .grid {
+  height: 100vh;
+  color: white;
+  padding-top: 150px;
+}
+
+body .landing .grid .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body .landing .grid .intro h1 {
+  font-size: 56px;
+  margin-bottom: 18px;
+}
+
+body .landing .grid .intro p {
+  font-size: 22px;
+  margin-bottom: 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+body .landing .grid .search .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .landing .grid .search .inputs .item {
+  margin: 0 10px;
+}
+/*# sourceMappingURL=landing.css.map */

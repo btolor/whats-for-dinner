@@ -1,0 +1,37 @@
+/* Import the mixins collection file... */
+@import mixins 
+body 
+    position: relative
+    header 
+        position: absolute
+        z-index: 1
+        transition: .3s
+        +center(100%,0 auto)
+        .grid 
+            padding-top: 36px 
+            .links-box 
+                text-align: right
+    .landing
+        background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg")
+        background-size: 100% 100%
+        background-color: black
+        transition: .4s
+        .grid
+            height: 100vh
+            color: white
+            padding-top: 150px
+            .intro 
+                +fullFlex(flex,column,center)
+                text-align: center
+                h1 
+                    font-size: 56px
+                    margin-bottom: 18px
+                p 
+                    font-size: 22px 
+                    margin-bottom: 0
+                    +center(60%, 0 auto)
+            .search 
+                .inputs 
+                    +fullFlex(flex, row,center)
+                    .item
+                        margin: 0 10px
