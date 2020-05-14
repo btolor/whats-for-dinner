@@ -1,2 +1,6 @@
-/* CSS for the landing section.. */
+/* CSS for the header-footer... */
+@import "header-footer.css";
+/* CSS for the landing section... */
 @import "landing.css";
+/* CSS for the recipe-content section... */
+@import "recipe-content.css";

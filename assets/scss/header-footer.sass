@@ -1,0 +1,66 @@
+/* Import the mixins collection file... */
+@import mixins 
+/* Variables... */
+// Fonts...
+$sub-title: 'Josefin Slab', serif
+$logo-headers: 'Niconne', cursive
+$text: 'Open Sans', sans-serif
+// Colors... 
+$orange : #FF652F
+$hover-orange: #e63d00
+$text-color: #272727
+
+
+body 
+    position: relative
+    header 
+        background: transparent
+        position: absolute
+        z-index: 1
+        transition: .3s
+        +center(100%,0 auto)
+        .grid 
+            padding-top: 36px 
+            .links-box 
+                +fullFlex(flex,row,flex-end)
+                p 
+                    color: $orange
+                    align-self: center 
+                    font-family: $text
+                    font-size: 26px
+                    padding-right: 10px
+                    font-style: italic
+                a 
+                    color: $orange
+                    font-size: 32px 
+                    margin: 08px
+                    align-self: center
+                    transition: .3s 
+                    &:hover
+                        color: $hover-orange
+    footer
+        background: black
+        .grid 
+            +flex(flex,column)
+            padding: 32px 0 20px 
+            text-align: center
+            h6 
+                font-family: $logo-headers
+                font-size: 32px
+                font-weight: 500
+                color: white
+            .social-links 
+                padding: 14px 0
+                .fa
+                    font-size: 30px
+                    margin: 0 10px
+                    color: $orange 
+                    transition: .3s
+                    &:hover
+                        color: $hover-orange
+            p 
+                font-family: $text 
+                font-size: 12px
+                color: white
+
+

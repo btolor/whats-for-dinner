@@ -1,37 +1,86 @@
 /* Import the mixins collection file... */
 @import mixins 
-body 
-    position: relative
-    header 
-        position: absolute
-        z-index: 1
-        transition: .3s
-        +center(100%,0 auto)
-        .grid 
-            padding-top: 36px 
-            .links-box 
-                text-align: right
-    .landing
-        background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg")
-        background-size: 100% 100%
-        background-color: black
-        transition: .4s
+/* Variables... */
+// Fonts...
+$sub-title: 'Josefin Slab', serif
+$logo-headers: 'Niconne', cursive
+$text: 'Open Sans', sans-serif
+// Colors... 
+$orange : #FF652F
+$hover-orange: #e63d00
+$text-color: #272727
+
+// Landing section styles...
+.landing
+    background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg")
+    background-size: 100% 100%
+    background-color: black
+    transition: .4s
+    .bg-layer 
+        background: rgba(0, 0, 0, .8)
         .grid
             height: 100vh
             color: white
-            padding-top: 150px
+            padding-top: 250px
             .intro 
                 +fullFlex(flex,column,center)
                 text-align: center
                 h1 
                     font-size: 56px
                     margin-bottom: 18px
+                    font-family: $logo-headers
                 p 
                     font-size: 22px 
                     margin-bottom: 0
+                    font-family: $sub-title
                     +center(60%, 0 auto)
             .search 
+                text-align: center
+                p 
+                    font-family: $text
+                    font-size: 16px 
+                    font-weight: 300
                 .inputs 
                     +fullFlex(flex, row,center)
+                    position: relative
+                    padding-top: 20px
+                    padding-bottom: 40px
                     .item
+                        background: white
                         margin: 0 10px
+                        +fullFlex(flex,row,center)
+                        border-radius: 4px
+                        label
+                            color: transparent 
+                            position: absolute
+                        .fa 
+                            align-self: center
+                            color: $orange
+                            font-size: 16px
+                            padding: 0 12px
+                        input
+                            align-self: center
+                            background: white
+                            margin-bottom: 0
+                            border: none
+                            border-radius: 4px
+                            font-family: $text
+                            font-size: 16px
+                            &:focus
+                                border: none
+                                outline: none ! important
+                                box-shadow: none
+                #sub-btn 
+                    color: white
+                    background: $orange
+                    font-family: $text
+                    font-size: 20px
+                    font-weight: 600
+                    border-radius: 4px
+                    padding: 12px 28px
+                    transition: .3s
+                    &:hover
+                        background: $hover-orange
+                    &:focus
+                        outline: 0
+                        

@@ -1,0 +1,173 @@
+/* Import the mixins collection file... */
+/* Variables... */
+.content {
+  background-image: url("/assets/images/chef-preparing-vegetable-dish-on-tree-slab-1267320.jpg");
+  background-size: 100% 100%;
+}
+
+.content .bg-layer {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.content .bg-layer .grid {
+  padding: 60px 0;
+}
+
+.content .bg-layer .grid h1 {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Josefin Slab", serif;
+  font-size: 56px;
+  padding-bottom: 48px;
+  color: #272727;
+  font-weight: 700;
+}
+
+.content .bg-layer .grid .recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content .bg-layer .grid .recipes .recipe {
+  width: 35%;
+  margin: 0 40px 40px;
+  -webkit-box-shadow: 0 8px 6px -6px #272727;
+  box-shadow: 0 8px 6px -6px #272727;
+  border: none;
+}
+
+.content .bg-layer .grid .recipes .recipe .title {
+  background: #FF652F;
+  padding: 14px 0;
+  text-align: center;
+}
+
+.content .bg-layer .grid .recipes .recipe .title h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "Josefin Slab", serif;
+  text-transform: capitalize;
+}
+
+.content .bg-layer .grid .recipes .recipe .info {
+  text-align: center;
+  padding: 20px;
+}
+
+.content .bg-layer .grid .recipes .recipe .info img {
+  padding-bottom: 20px;
+  width: 80px;
+}
+
+.content .bg-layer .grid .recipes .recipe .info hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content .bg-layer .grid .recipes .recipe .info #ingredients {
+  color: #272727;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: left;
+  text-transform: capitalize;
+  line-height: 2;
+  padding: 18px;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 20px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns .share-links {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns .share-links .fa {
+  color: #FF652F;
+  font-size: 24px;
+  margin: 0 6px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns .share-links .fa:hover {
+  color: #e63d00;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns #recipe-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #FF652F;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 4px 14px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns #recipe-btn:hover {
+  background: #e63d00;
+}
+
+.content .bg-layer .grid .recipes .recipe .info .btns #recipe-btn:focus {
+  outline: 0;
+}
+
+.content .bg-layer .grid .pages {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.content .bg-layer .grid .pages a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background: #FF652F;
+  padding: 8px 14px;
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.content .bg-layer .grid .pages a:hover {
+  background: #e63d00;
+}
+
+.content .bg-layer .grid .pages .active {
+  background: #e63d00;
+}
+/*# sourceMappingURL=recipe-content.css.map */

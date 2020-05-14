@@ -2,22 +2,22 @@
 $(() => {
     /**Application Variables... */
     // API endpoint url...
-    // let api_end_poit = ""
+    let api_end_poit = ""
     // Items input variables...
-    // let item_1, item_2, item_3, item_4
+    let item_1, item_2, item_3, item_4
     // Dish type input variable...
-    // let dish = ""
+    let dish = ""
     // Dish type search variable...
-    // let dishSearch = ""
+    let dishSearch = ""
     // GET request serch variable...
-    // let ingredients = ""
+    let ingredients = ""
 
 
-    // ingredient1 = $('#item1').val()
-    // ingredient2 = $('#item2').val()
-    // ingredient3 = $('#item3').val()
-    // ingredient4 = $('#item4').val()
-    // foodDish = $('#dish').val()
+    ingredient1 = $('#item1').val()
+    ingredient2 = $('#item2').val()
+    ingredient3 = $('#item3').val()
+    ingredient4 = $('#item4').val()
+    foodDish = $('#dish').val()
 
     // if (ingredient1 != "") {
     //     ingredients = ingredient1;
@@ -60,7 +60,7 @@ $(() => {
     ]
     let counter = 0
 
-    let changeBackgroundImage = ()=>{
+    let changeSearchBackgroundImage = ()=>{
         $('.landing').css({
             backgroundImage : 'url("'+images[counter]+'")'
         })
@@ -72,7 +72,7 @@ $(() => {
         }
     }
 
-    setInterval(changeBackgroundImage,10000)
+    setInterval(changeSearchBackgroundImage,10000)
 
     $(window).scroll(()=>{
         if(window.pageYOffset >20){

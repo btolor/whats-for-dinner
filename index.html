@@ -9,6 +9,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;600;700&family=Niconne&family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- BoorStrap Link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- CSS LINKS -->
@@ -32,10 +35,11 @@
                 <!-- end of logo-box -->
                 <!-- start of links-box -->
                 <div class="cell small-0 medium-0 large-6 links-box">
-                    Follow Us:
+                    <p>Follow Us:</p>
                     <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
                     <a href=""><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    
                 </div>
                 <!-- end of links-box -->
             </div>
@@ -49,79 +53,287 @@
     <main>
         <!-- start of landing-section -->
         <section class="landing">
-            <!-- start of container -->
-            <div class="grid-container">
-                
-                <!-- start of grid -->
-                <div class="grid-margin-x grid-x grid">
-                    <!-- start of intro -->
-                    <div class="cell small-12 medium-12 large-12 intro">
-                        <h1>Don't Know What To Cook</h1>
-                        <p>
-                            No problem! We will help you figure out what what you should cook for breakfast,
-                            dinner, lunch, dessert, or whenever.
-                        </p>
-                    </div>
-                    <!-- end of intro -->
-                    <!-- start of search -->
-                    <div class="cell small-12 medium-12 large-12 search">
-                        <p>
-                            Just enter in a few ingredients below and maybe in a
-                            certain dish that you would like to make. We will take
-                            care of the rest.
-                        </p>
-                        <!-- start of inputs -->
-                        <div class="inputs">
-                            <!-- start of item-1 -->
-                            <div class="item item-1">
-                                <label for="item-1">Ingredient 1</label>
-                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                <input type="text" name="item1" id="item-1">
-                            </div>
-                            <!-- end of item-1 -->
-                            <!-- start of item-2 -->
-                            <div class="item item-2">
-                                <label for="item-2">Ingredient 2</label>
-                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                <input type="text" name="item2" id="item-2">
-                            </div>
-                            <!-- end of item-2 -->
-                            <!-- start of item-3 -->
-                            <div class="item item-3">
-                                <label for="item-3">Ingredient 3</label>
-                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                <input type="text" name="item3" id="item-3">
-                            </div>
-                            <!-- end of item-3 -->
-                            <!-- start of item-4 -->
-                            <div class="item item-4">
-                                <label for="item-4">Ingredient 4</label>
-                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                <input type="text" name="item4" id="item-4">
-                            </div>
-                            <!-- end of item-4 -->
-                            <!-- start of dish -->
-                            <div class="item dish">
-                                <label for="dish-type">Dish Type</label>
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                                <input type="text" name="dish" id="dish-type">
-                            </div>
-                            <!-- end of dish -->
+            <!-- start of bg-layer -->
+            <div class="bg-layer">
+                <!-- start of container -->
+                <div class="grid-container">
+
+                    <!-- start of grid -->
+                    <div class="grid-margin-x grid-x grid">
+                        <!-- start of intro -->
+                        <div class="cell small-12 medium-12 large-12 intro">
+                            <h1>Don't Know What To Cook</h1>
+                            <p>
+                                No problem! We will help you figure out what what you should cook for breakfast,
+                                dinner, lunch, dessert, or whenever.
+                            </p>
                         </div>
-                        <!-- end of inputs -->
-                        <button type="submit">Let's Cook</button>
+                        <!-- end of intro -->
+                        <!-- start of search -->
+                        <div class="cell small-12 medium-12 large-12 search">
+                            <p>
+                                Just enter in a few ingredients below and maybe in a
+                                certain dish that you would like to make. We will take
+                                care of the rest.
+                            </p>
+                            <!-- start of inputs -->
+                            <div class="inputs">
+                                <!-- start of item-1 -->
+                                <div class="item item-1">
+                                    <label for="item-1">Ingredient 1</label>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Ingredient..." name="item1" id="item-1">
+                                </div>
+                                <!-- end of item-1 -->
+                                <!-- start of item-2 -->
+                                <div class="item item-2">
+                                    <label for="item-2">Ingredient 2</label>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Ingredient..." name="item2" id="item-2">
+                                </div>
+                                <!-- end of item-2 -->
+                                <!-- start of item-3 -->
+                                <div class="item item-3">
+                                    <label for="item-3">Ingredient 3</label>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Ingredient..." name="item3" id="item-3">
+                                </div>
+                                <!-- end of item-3 -->
+                                <!-- start of item-4 -->
+                                <div class="item item-4">
+                                    <label for="item-4">Ingredient 4</label>
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Ingredient..." name="item4" id="item-4">
+                                </div>
+                                <!-- end of item-4 -->
+                                <!-- start of dish -->
+                                <div class="item dish">
+                                    <label for="dish-type">Dish Type</label>
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Dish Type..." name="dish" id="dish-type">
+                                </div>
+                                <!-- end of dish -->
+                            </div>
+                            <!-- end of inputs -->
+                            <button id="sub-btn" type="submit">Let's Cook</button>
+                        </div>
+                        <!-- end of search -->
                     </div>
-                    <!-- end of search -->
+                    <!-- end of grid  -->
                 </div>
-                <!-- end of grid  -->
+                <!-- end of container -->
             </div>
-            <!-- end of container -->
+            <!-- end of bg-layer -->
         </section>
         <!-- end of landing-section -->
-        
+        <!-- start of content-section -->
+        <section class="content">
+            <!-- start of bg-layer -->
+            <div class="bg-layer">
+                <!-- start of container -->
+                <div class="grid-container">
+                    <!-- start of grid -->
+                    <div class="grid-margin-x grid-x grid">
+
+                        <h1>Recipes To Cook</h1>
+
+                        <!-- start of recipes -->
+                        <div class="cell small-12 medium-12 large-12 recipes">
+                            <!-- start of recipe -->
+                            <div class="card recipe">
+                                <!-- start of title -->
+                                <div class="title">
+                                    <h3>Title</h3>
+                                </div>
+                                <!-- end of title -->
+                                <!-- start of info -->
+                                <div class="info">
+                                    <img src="http://placehold.jp/80x80.png" alt="This is the image of recipe's card dish.">
+                                    <hr>
+                                    <p id="ingredients">
+                                        tomato, onions, red pepper, garlic, olive oil, zucchini, cream cheese, 
+                                        vermicelli, eggs, parmesan cheese, milk, italian seasoning, salt, 
+                                        black pepper
+                                    </p>
+                                    <hr>
+                                    <!-- start of btns -->
+                                    <div class="btns">
+                                        <!-- start of share-links -->
+                                        <div class="share-links">
+                                            <a href="#/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- end of share-links -->
+                                        <a id="recipe-btn" href="#/">Recipe</a>
+                                    </div>
+                                    <!-- end of btns -->
+                                </div>
+                                <!-- end of info -->
+                            </div>
+                            <!-- end of recipe -->
+
+
+                            <!-- start of recipe -->
+                            <div class="card recipe">
+                                <!-- start of title -->
+                                <div class="title">
+                                    <h3>Title</h3>
+                                </div>
+                                <!-- end of title -->
+                                <!-- start of info -->
+                                <div class="info">
+                                    <img src="http://placehold.jp/80x80.png" alt="This is the image of recipe's card dish.">
+                                    <hr>
+                                    <p id="ingredients">
+                                        tomato, onions, red pepper, garlic, olive oil, zucchini, cream cheese, 
+                                        vermicelli, eggs, parmesan cheese, milk, italian seasoning, salt, 
+                                        black pepper
+                                    </p>
+                                    <hr>
+                                    <!-- start of btns -->
+                                    <div class="btns">
+                                        <!-- start of share-links -->
+                                        <div class="share-links">
+                                            <a href="#/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- end of share-links -->
+                                        <a id="recipe-btn" href="#/">Recipe</a>
+                                    </div>
+                                    <!-- end of btns -->
+                                </div>
+                                <!-- end of info -->
+                            </div>
+                            <!-- end of recipe -->
+
+
+                            <!-- start of recipe -->
+                            <div class="card recipe">
+                                <!-- start of title -->
+                                <div class="title">
+                                    <h3>Title</h3>
+                                </div>
+                                <!-- end of title -->
+                                <!-- start of info -->
+                                <div class="info">
+                                    <img src="http://placehold.jp/80x80.png" alt="This is the image of recipe's card dish.">
+                                    <hr>
+                                    <p id="ingredients">
+                                        tomato, onions, red pepper, garlic, olive oil, zucchini, cream cheese, 
+                                        vermicelli, eggs, parmesan cheese, milk, italian seasoning, salt, 
+                                        black pepper
+                                    </p>
+                                    <hr>
+                                    <!-- start of btns -->
+                                    <div class="btns">
+                                        <!-- start of share-links -->
+                                        <div class="share-links">
+                                            <a href="#/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- end of share-links -->
+                                        <a id="recipe-btn" href="#/">Recipe</a>
+                                    </div>
+                                    <!-- end of btns -->
+                                </div>
+                                <!-- end of info -->
+                            </div>
+                            <!-- end of recipe -->
+
+
+                            <!-- start of recipe -->
+                            <div class="card recipe">
+                                <!-- start of title -->
+                                <div class="title">
+                                    <h3>Title</h3>
+                                </div>
+                                <!-- end of title -->
+                                <!-- start of info -->
+                                <div class="info">
+                                    <img src="http://placehold.jp/80x80.png" alt="This is the image of recipe's card dish.">
+                                    <hr>
+                                    <p id="ingredients">
+                                        tomato, onions, red pepper, garlic, olive oil, zucchini, cream cheese, 
+                                        vermicelli, eggs, parmesan cheese, milk, italian seasoning, salt, 
+                                        black pepper
+                                    </p>
+                                    <hr>
+                                    <!-- start of btns -->
+                                    <div class="btns">
+                                        <!-- start of share-links -->
+                                        <div class="share-links">
+                                            <a href="#/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#/"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                        </div>
+                                        <!-- end of share-links -->
+                                        <a id="recipe-btn" href="#/">Recipe</a>
+                                    </div>
+                                    <!-- end of btns -->
+                                </div>
+                                <!-- end of info -->
+                            </div>
+                            <!-- end of recipe -->
+
+                        </div>
+                        <!-- end of recipes -->
+
+                        <!-- start of pages -->
+                        <div class="pages">
+                            <a class="active" href="#/">1</a>
+                            <a href="#/">2</a>
+                            <a href="#/">3</a>
+                            <a href="#/">4</a>
+                            <a href="#/">5</a>
+
+                        </div>
+                        <!-- end of pages -->
+
+
+
+
+                        <!-- Facebook Share link -->
+                        <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.bigoven.com/recipe/roasted-pepper-and-bacon-omelet/43919">Share on Facebook</a> -->
+                        <!-- Twitter Share link -->
+                        <!-- <a href="https://twitter.com/intent/tweet?text=https%3A//www.bigoven.com/recipe/roasted-pepper-and-bacon-omelet/43919">twitter</a> -->
+                        <!-- Email Share link -->
+                        <!-- <a href="mailto:?body=https%3A//www.bigoven.com/recipe/roasted-pepper-and-bacon-omelet/43919">Send Email</a> -->
+                    </div>
+                    <!-- end of grid -->
+                </div>
+                <!-- end of container -->
+            </div>
+            <!-- end of bg-layer -->
+        </section>
+        <!-- end of content-section -->
+
+
     </main>
     <!-- end of main -->
     <!-- start of footer -->
+    <footer>
+        <!-- start of container -->
+        <div class="grid-container">
+            <!-- start of grid -->
+            <div class="grid-margin-x grid-x grid">
+                <h6>Follow Us On:</h6>
+                <!-- start of social-links -->
+                <div class="cell small-12 medium-12 large-12 social-links">
+                    <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                </div>
+                <!-- end of social-links -->
+                <p>What Should I Cook</p>
+                <p>Copyright © 2020</p>
+            </div>
+            <!-- end of grid -->
+        </div>
+        <!-- end of container -->
+    </footer>
     <!-- end of footer -->
     <!-- start of JS-tags -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

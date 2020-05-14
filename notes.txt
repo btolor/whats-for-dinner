@@ -1,4 +1,10 @@
-font-family: 'Meie Script', cursive;
-font-family: 'Niconne', cursive;
-font-family: 'Parisienne', cursive;
-font-family: 'Playball', cursive;
+$sub-title: 'Josefin Slab', serif;
+$logo-headers: 'Niconne', cursive;
+$text: 'Open Sans', sans-serif;
+
+
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;600;700&family=Niconne&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+ColorS: 
+$orange : #FF652F
+$text-color: #272727

@@ -1,0 +1,104 @@
+/* Import the mixins collection file... */
+/* Variables... */
+body {
+  position: relative;
+}
+
+body header {
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body header .grid {
+  padding-top: 36px;
+}
+
+body header .grid .links-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body header .grid .links-box p {
+  color: #FF652F;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 26px;
+  padding-right: 10px;
+  font-style: italic;
+}
+
+body header .grid .links-box a {
+  color: #FF652F;
+  font-size: 32px;
+  margin: 08px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body header .grid .links-box a:hover {
+  color: #e63d00;
+}
+
+body footer {
+  background: black;
+}
+
+body footer .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px 0 20px;
+  text-align: center;
+}
+
+body footer .grid h6 {
+  font-family: "Niconne", cursive;
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
+}
+
+body footer .grid .social-links {
+  padding: 14px 0;
+}
+
+body footer .grid .social-links .fa {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #FF652F;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body footer .grid .social-links .fa:hover {
+  color: #e63d00;
+}
+
+body footer .grid p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: white;
+}
+/*# sourceMappingURL=header-footer.css.map */

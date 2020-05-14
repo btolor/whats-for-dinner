@@ -1,26 +1,6 @@
 /* Import the mixins collection file... */
-body {
-  position: relative;
-}
-
-body header {
-  position: absolute;
-  z-index: 1;
-  -webkit-transition: .3s;
-  transition: .3s;
-  width: 100%;
-  margin: 0 auto;
-}
-
-body header .grid {
-  padding-top: 36px;
-}
-
-body header .grid .links-box {
-  text-align: right;
-}
-
-body .landing {
+/* Variables... */
+.landing {
   background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg");
   background-size: 100% 100%;
   background-color: black;
@@ -28,13 +8,17 @@ body .landing {
   transition: .4s;
 }
 
-body .landing .grid {
-  height: 100vh;
-  color: white;
-  padding-top: 150px;
+.landing .bg-layer {
+  background: rgba(0, 0, 0, 0.8);
 }
 
-body .landing .grid .intro {
+.landing .bg-layer .grid {
+  height: 100vh;
+  color: white;
+  padding-top: 250px;
+}
+
+.landing .bg-layer .grid .intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,19 +32,31 @@ body .landing .grid .intro {
   text-align: center;
 }
 
-body .landing .grid .intro h1 {
+.landing .bg-layer .grid .intro h1 {
   font-size: 56px;
   margin-bottom: 18px;
+  font-family: "Niconne", cursive;
 }
 
-body .landing .grid .intro p {
+.landing .bg-layer .grid .intro p {
   font-size: 22px;
   margin-bottom: 0;
+  font-family: "Josefin Slab", serif;
   width: 60%;
   margin: 0 auto;
 }
 
-body .landing .grid .search .inputs {
+.landing .bg-layer .grid .search {
+  text-align: center;
+}
+
+.landing .bg-layer .grid .search p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.landing .bg-layer .grid .search .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,9 +67,77 @@ body .landing .grid .search .inputs {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
-body .landing .grid .search .inputs .item {
+.landing .bg-layer .grid .search .inputs .item {
+  background: white;
   margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+}
+
+.landing .bg-layer .grid .search .inputs .item label {
+  color: transparent;
+  position: absolute;
+}
+
+.landing .bg-layer .grid .search .inputs .item .fa {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #FF652F;
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+.landing .bg-layer .grid .search .inputs .item input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: white;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.landing .bg-layer .grid .search .inputs .item input:focus {
+  border: none;
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.landing .bg-layer .grid .search #sub-btn {
+  color: white;
+  background: #FF652F;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 12px 28px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.landing .bg-layer .grid .search #sub-btn:hover {
+  background: #e63d00;
+}
+
+.landing .bg-layer .grid .search #sub-btn:focus {
+  outline: 0;
 }
 /*# sourceMappingURL=landing.css.map */

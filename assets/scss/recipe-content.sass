@@ -1,0 +1,112 @@
+/* Import the mixins collection file... */
+@import mixins 
+/* Variables... */
+// Fonts...
+$sub-title: 'Josefin Slab', serif
+$logo-headers: 'Niconne', cursive
+$text: 'Open Sans', sans-serif
+// Colors... 
+$orange : #FF652F
+$hover-orange: #e63d00
+$text-color: #272727
+
+
+.content 
+    background-image: url("/assets/images/chef-preparing-vegetable-dish-on-tree-slab-1267320.jpg")
+    background-size: 100% 100%
+    .bg-layer
+        background-color: rgba(255, 255, 255, .6)
+        .grid 
+            padding: 60px 0
+            h1 
+                text-align: center 
+                +center(100%, 0 auto)
+                font-family: $sub-title
+                font-size: 56px
+                padding-bottom: 48px
+                color: $text-color
+                font-weight: 700
+            .recipes 
+                +fullFlex(flex,row,space-between)
+                flex-wrap: wrap
+                .recipe 
+                    +center(35%, 0 40px 40px)
+                    -moz-box-shadow: 0 8px 6px -6px $text-color
+                    -webkit-box-shadow: 0 8px 6px -6px $text-color
+                    box-shadow: 0 8px 6px -6px $text-color
+                    border: none 
+                    .title
+                        background: $orange 
+                        padding: 14px 0 
+                        text-align: center
+                        h3 
+                            color: white 
+                            font-weight: 600 
+                            font-size: 24px 
+                            font-family: $sub-title
+                            text-transform: capitalize
+                    .info 
+                        text-align: center
+                        padding: 20px
+                        img 
+                            padding-bottom: 20px
+                            width: 80px
+                        hr 
+                            +center(90%, 0 auto)
+                        #ingredients 
+                            color: $text-color
+                            font-family: $text
+                            font-size: 16px
+                            font-weight: 600
+                            font-style: italic
+                            text-align: left
+                            text-transform: capitalize
+                            line-height: 2
+                            padding: 18px
+                        .btns 
+                            +fullFlex(flex, row, space-around)
+                            padding-top: 20px
+                            +center(65%, 0 auto)
+                            .share-links 
+                                align-self: center 
+                                .fa 
+                                    color: $orange 
+                                    font-size: 24px
+                                    margin: 0 6px
+                                    transition: .3s 
+                                    &:hover
+                                        color: $hover-orange
+                            #recipe-btn 
+                                align-self: center
+                                background: $orange
+                                color: white
+                                font-family: $text
+                                font-size: 18px
+                                font-weight: 600
+                                text-decoration: none
+                                border-radius: 4px
+                                padding: 4px 14px
+                                transition: .3s
+                                &:hover
+                                    background: $hover-orange
+                                &:focus
+                                    outline: 0
+            .pages
+                +center(100%, 0 auto)
+                text-align: center
+                padding-top: 40px
+                a 
+                    text-decoration: none
+                    font-family: $text
+                    font-weight: 700 
+                    background: $orange 
+                    padding: 8px 14px
+                    color: white 
+                    transition: .3s 
+                    &:hover
+                        background: $hover-orange
+                .active
+                    background: $hover-orange
+
+
+
