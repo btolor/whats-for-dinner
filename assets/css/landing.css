@@ -15,7 +15,7 @@
 .landing .bg-layer .grid {
   height: 100vh;
   color: white;
-  padding-top: 250px;
+  padding-top: 50vh;
 }
 
 .landing .bg-layer .grid .intro {
@@ -33,15 +33,15 @@
 }
 
 .landing .bg-layer .grid .intro h1 {
-  font-size: 56px;
+  font-size: 34px;
   margin-bottom: 18px;
-  font-family: "Niconne", cursive;
+  font-family: "Josefin Slab", serif;
 }
 
 .landing .bg-layer .grid .intro p {
-  font-size: 22px;
+  font-size: 16px;
   margin-bottom: 0;
-  font-family: "Josefin Slab", serif;
+  font-family: "Open Sans", sans-serif;
   width: 60%;
   margin: 0 auto;
 }

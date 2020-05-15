@@ -77,16 +77,35 @@ $(() => {
     $(window).scroll(()=>{
         if(window.pageYOffset >20){
             $('header').css({
-                color: 'red',
                 position: 'fixed',
-                backgroundColor: 'white'
+                backgroundColor: '#FF652F',
+                borderBottom: '1px solid black'
             })
+            $('.logo-box, .links-box').hide()
+            
+            $('.scrolled-header').css({
+                display: 'flex'
+            })
+           
+            
         }else{
             $('header').css({
-                color: 'white',
                 position: 'absolute',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                borderBottom: 'none'
             })
+            if($(window).width() >= 650){
+               $('.links-box').show() 
+            }
+            if($(window).width() <= 650){
+                $('.links').hide()
+                $('.scrolled-header').css({
+                    justifyContent: 'center'
+                })
+            }
+            
+            $('.scrolled-header').hide()
+            $('.logo-box').delay('slow').show()
         }
     })
 

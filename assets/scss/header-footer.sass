@@ -20,24 +20,95 @@ body
         transition: .3s
         +center(100%,0 auto)
         .grid 
-            padding-top: 36px 
+            +flex(flex,column)
+            +media-max(1240px)
+                +center(98%,0 auto)
             .links-box 
                 +fullFlex(flex,row,flex-end)
+                padding-top: 26px
+                transition: .3s
+                +media-max(650px)
+                    display: none
                 p 
                     color: $orange
                     align-self: center 
                     font-family: $text
-                    font-size: 26px
+                    font-size: 18px
                     padding-right: 10px
                     font-style: italic
+                    +media-max(1024px)
+                        font-size: 16px
                 a 
                     color: $orange
-                    font-size: 32px 
+                    font-size: 22px 
                     margin: 08px
                     align-self: center
                     transition: .3s 
+                    +media-max(1024px)
+                        font-size: 20px
                     &:hover
                         color: $hover-orange
+            .logo-box 
+                padding-top: 8vh
+                text-align: center
+                transition: .3s
+                +media-max(1024px)
+                    padding-top: 4vh
+                img 
+                    width: 160px
+                    +media-max(1024px)
+                        width: 120px
+                    +media-max(650px)
+                        width: 90px
+                h1 
+                    font-size: 56px
+                    margin-bottom: 18px
+                    font-family: $logo-headers
+                    color: white
+                    +media-max(1024px)
+                        font-size: 48px
+                    +media-max(650px) 
+                        font-size: 32px
+            .scrolled-header
+                transition: .3s
+                padding: 16px 0 8px
+                +fullFlex(none,row,space-between)
+                .logo 
+                    +flex(flex,row)
+                    img 
+                        width: 60px
+                        padding-right: 12px
+                        +media-max(860px)
+                            width: 50px
+                    h1 
+                        color: white 
+                        font-family: $logo-headers
+                        font-size: 38px 
+                        align-self: center
+                        margin-bottom: 0
+                        +media-max(860px)
+                            font-size: 32px
+                .links
+                    +fullFlex(flex,row,flex-end)
+                    p 
+                        color: white
+                        align-self: center 
+                        font-family: $text
+                        font-size: 18px
+                        padding-right: 10px
+                        font-style: italic
+                        +media-max(860px)
+                            font-size: 16px 
+                    a 
+                        color: white
+                        font-size: 22px 
+                        margin: 0 8px
+                        align-self: center
+                        transition: .3s 
+                        +media-max(860px)
+                            font-size: 18px
+                        &:hover
+                            color: $hover-orange
     footer
         background: black
         .grid 
@@ -49,6 +120,10 @@ body
                 font-size: 32px
                 font-weight: 500
                 color: white
+                +media-max(768px)
+                    font-size: 28px
+                +media-max(650px)
+                    font-size: 24px
             .social-links 
                 padding: 14px 0
                 .fa
@@ -56,11 +131,18 @@ body
                     margin: 0 10px
                     color: $orange 
                     transition: .3s
+                    +media-max(768px)
+                        font-size: 26px
+                    +media-max(650px)
+                        font-size: 22px
                     &:hover
                         color: $hover-orange
             p 
                 font-family: $text 
                 font-size: 12px
                 color: white
+                margin-bottom: 4px
+                +media-max(650px)
+                    font-size: 10px
 
 
