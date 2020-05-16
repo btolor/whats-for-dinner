@@ -15,7 +15,81 @@
 .landing .bg-layer .grid {
   height: 100vh;
   color: white;
-  padding-top: 50vh;
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 40px;
+  }
+}
+
+.landing .bg-layer .grid .logo-box {
+  padding-top: 8vh;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .landing .bg-layer .grid .logo-box {
+    padding-top: 12vh;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .landing .bg-layer .grid .logo-box {
+    padding-top: 8vh;
+  }
+}
+
+.landing .bg-layer .grid .logo-box img {
+  width: 160px;
+}
+
+@media screen and (max-width: 1024px) {
+  .landing .bg-layer .grid .logo-box img {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .landing .bg-layer .grid .logo-box img {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .logo-box img {
+    width: 60px;
+  }
+}
+
+.landing .bg-layer .grid .logo-box h1 {
+  font-size: 56px;
+  margin-bottom: 18px;
+  font-family: "Niconne", cursive;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .landing .bg-layer .grid .logo-box h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .landing .bg-layer .grid .logo-box h1 {
+    font-size: 30;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .logo-box h1 {
+    font-size: 24px;
+  }
 }
 
 .landing .bg-layer .grid .intro {
@@ -32,10 +106,28 @@
   text-align: center;
 }
 
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .intro {
+    padding-top: 20px;
+  }
+}
+
 .landing .bg-layer .grid .intro h1 {
   font-size: 34px;
   margin-bottom: 18px;
   font-family: "Josefin Slab", serif;
+}
+
+@media screen and (max-width: 900px) {
+  .landing .bg-layer .grid .intro h1 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .intro h1 {
+    font-size: 22px;
+  }
 }
 
 .landing .bg-layer .grid .intro p {
@@ -46,6 +138,26 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 900px) {
+  .landing .bg-layer .grid .intro p {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .landing .bg-layer .grid .intro p {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .intro p {
+    font-size: 14px;
+    width: 92%;
+    margin-bottom: 16px;
+  }
+}
+
 .landing .bg-layer .grid .search {
   text-align: center;
 }
@@ -54,6 +166,20 @@
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 900px) {
+  .landing .bg-layer .grid .search p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .search p {
+    font-size: 13px;
+    width: 92%;
+    margin: 0 auto;
+  }
 }
 
 .landing .bg-layer .grid .search .inputs {
@@ -72,6 +198,14 @@
   padding-bottom: 40px;
 }
 
+@media screen and (max-width: 900px) {
+  .landing .bg-layer .grid .search .inputs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+}
+
 .landing .bg-layer .grid .search .inputs .item {
   background: white;
   margin: 0 10px;
@@ -86,6 +220,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .landing .bg-layer .grid .search .inputs .item {
+    margin-bottom: 16px;
+  }
 }
 
 .landing .bg-layer .grid .search .inputs .item label {
@@ -131,6 +271,12 @@
   padding: 12px 28px;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 650px) {
+  .landing .bg-layer .grid .search #sub-btn {
+    font-size: 18px;
+  }
 }
 
 .landing .bg-layer .grid .search #sub-btn:hover {

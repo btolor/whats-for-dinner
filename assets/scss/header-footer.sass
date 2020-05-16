@@ -48,27 +48,6 @@ body
                         font-size: 20px
                     &:hover
                         color: $hover-orange
-            .logo-box 
-                padding-top: 8vh
-                text-align: center
-                transition: .3s
-                +media-max(1024px)
-                    padding-top: 4vh
-                img 
-                    width: 160px
-                    +media-max(1024px)
-                        width: 120px
-                    +media-max(650px)
-                        width: 90px
-                h1 
-                    font-size: 56px
-                    margin-bottom: 18px
-                    font-family: $logo-headers
-                    color: white
-                    +media-max(1024px)
-                        font-size: 48px
-                    +media-max(650px) 
-                        font-size: 32px
             .scrolled-header
                 transition: .3s
                 padding: 16px 0 8px
@@ -80,6 +59,9 @@ body
                         padding-right: 12px
                         +media-max(860px)
                             width: 50px
+                        +media-max(650px)
+                            width: 42px
+                            padding-right: 8px
                     h1 
                         color: white 
                         font-family: $logo-headers
@@ -88,6 +70,8 @@ body
                         margin-bottom: 0
                         +media-max(860px)
                             font-size: 32px
+                        +media-max(650px)
+                            font-size: 28px
                 .links
                     +fullFlex(flex,row,flex-end)
                     p 

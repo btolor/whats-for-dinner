@@ -81,7 +81,7 @@ $(() => {
                 backgroundColor: '#FF652F',
                 borderBottom: '1px solid black'
             })
-            $('.logo-box, .links-box').hide()
+            $('.links-box').hide()
             
             $('.scrolled-header').css({
                 display: 'flex'
@@ -105,7 +105,7 @@ $(() => {
             }
             
             $('.scrolled-header').hide()
-            $('.logo-box').delay('slow').show()
+            // $('.logo-box').show()
         }
     })
 

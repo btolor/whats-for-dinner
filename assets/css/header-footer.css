@@ -91,54 +91,6 @@ body header .grid .links-box a:hover {
   color: #e63d00;
 }
 
-body header .grid .logo-box {
-  padding-top: 8vh;
-  text-align: center;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-@media screen and (max-width: 1024px) {
-  body header .grid .logo-box {
-    padding-top: 4vh;
-  }
-}
-
-body header .grid .logo-box img {
-  width: 160px;
-}
-
-@media screen and (max-width: 1024px) {
-  body header .grid .logo-box img {
-    width: 120px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  body header .grid .logo-box img {
-    width: 90px;
-  }
-}
-
-body header .grid .logo-box h1 {
-  font-size: 56px;
-  margin-bottom: 18px;
-  font-family: "Niconne", cursive;
-  color: white;
-}
-
-@media screen and (max-width: 1024px) {
-  body header .grid .logo-box h1 {
-    font-size: 48px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  body header .grid .logo-box h1 {
-    font-size: 32px;
-  }
-}
-
 body header .grid .scrolled-header {
   -webkit-transition: .3s;
   transition: .3s;
@@ -174,6 +126,13 @@ body header .grid .scrolled-header .logo img {
   }
 }
 
+@media screen and (max-width: 650px) {
+  body header .grid .scrolled-header .logo img {
+    width: 42px;
+    padding-right: 8px;
+  }
+}
+
 body header .grid .scrolled-header .logo h1 {
   color: white;
   font-family: "Niconne", cursive;
@@ -187,6 +146,12 @@ body header .grid .scrolled-header .logo h1 {
 @media screen and (max-width: 860px) {
   body header .grid .scrolled-header .logo h1 {
     font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body header .grid .scrolled-header .logo h1 {
+    font-size: 28px;
   }
 }
 
