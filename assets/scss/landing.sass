@@ -16,6 +16,8 @@ $text-color: #272727
     background-size: 100% 100%
     background-color: black
     transition: .4s
+    +media-max(650px)
+        background-size: 200% 100%
     .bg-layer 
         background: rgba(0, 0, 0, .8)
         .grid
@@ -86,8 +88,7 @@ $text-color: #272727
                     +media-max(900px) 
                         font-size: 12px
                     +media-max(650px)
-                        font-size: 13px 
-                        +center(92%, 0 auto)
+                        display: none
                 .inputs 
                     +fullFlex(flex, row,center)
                     position: relative
@@ -138,4 +139,3 @@ $text-color: #272727
                         background: $hover-orange
                     &:focus
                         outline: 0
-                        

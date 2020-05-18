@@ -14,10 +14,15 @@ $text-color: #272727
 .content 
     background-image: url("/assets/images/chef-preparing-vegetable-dish-on-tree-slab-1267320.jpg")
     background-size: 100% 100%
+    transition: .3s
+    +media-max(650px)
+        background-size: 200% 100%
     .bg-layer
         background-color: rgba(255, 255, 255, .6)
         .grid 
             padding: 60px 0
+            +media-max(450px)
+                padding-bottom: 40px
             h1 
                 text-align: center 
                 +center(100%, 0 auto)
@@ -26,6 +31,16 @@ $text-color: #272727
                 padding-bottom: 48px
                 color: $text-color
                 font-weight: 700
+                +media-max(1024px)
+                    font-size: 48px
+                +media-max(800px)
+                    font-size: 38px
+                +media-max(650px)
+                    padding-bottom: 32px
+                +media-max(500px)
+                    font-size: 32px
+                +media-max(350px)
+                    font-size: 28px
             .recipes 
                 +fullFlex(flex,row,space-between)
                 flex-wrap: wrap
@@ -35,9 +50,18 @@ $text-color: #272727
                     -webkit-box-shadow: 0 8px 6px -6px $text-color
                     box-shadow: 0 8px 6px -6px $text-color
                     border: none 
+                    +media-max(1024px)
+                        margin-left: 20px
+                        margin-right: 20px
+                    +media-max(800px)
+                        +center(50%, 0 40px 40px)
+                    +media-max(500px)
+                        +center(50%, 0 20px 40px)
+                    +media-max(450px)
+                        +center(50%, 0 10px 40px)
                     .credit
                         background: $orange 
-                        padding: 14px 26px 
+                        padding: 18px 26px 12px 
                         text-align: left
                         h4 
                             color: white 
@@ -46,15 +70,26 @@ $text-color: #272727
                             font-style: italic 
                             font-family: $text
                             text-transform: capitalize
+                            +media-max(400px)
+                                font-size: 12px
                     .info 
                         text-align: center
                         padding: 20px
+                        +media-max(450px) 
+                            padding: 10px
                         .heading 
                             +fullFlex(flex,row,space-around)
+                            +media-max(450px)
+                                flex-direction: column
+                                align-items: center
+                                padding-bottom: 16px
+                                padding-top: 10px
                             img 
                                 padding-bottom: 20px
                                 width: 80px
+                                align-self: center
                             #title 
+                                align-self: center
                                 font-family: $sub-title
                                 color: $orange 
                                 font-size: 22px
@@ -75,17 +110,26 @@ $text-color: #272727
                             text-transform: capitalize
                             line-height: 2
                             padding: 18px
+                            +media-max(650px)
+                                font-size: 15px
                         .btns 
                             +fullFlex(flex, row, space-around)
                             padding-top: 20px
                             +center(65%, 0 auto)
+                            +media-max(450px)
+                                flex-direction: column-reverse
                             .share-links 
                                 align-self: center 
+                                +media-max(650px)
+                                    padding: 26px 0 16px
                                 .fa 
                                     color: $orange 
                                     font-size: 24px
                                     margin: 0 6px
                                     transition: .3s 
+                                    +media-max(450px)
+                                        margin: 0 12px
+                                        font-size: 19px
                                     &:hover
                                         color: $hover-orange
                             #recipe-btn 
@@ -99,6 +143,8 @@ $text-color: #272727
                                 border-radius: 4px
                                 padding: 4px 14px
                                 transition: .3s
+                                +media-max(450px)
+                                    font-size: 19px
                                 &:hover
                                     background: $hover-orange
                                 &:focus
@@ -107,6 +153,10 @@ $text-color: #272727
                 +center(100%, 0 auto)
                 text-align: center
                 padding-top: 40px
+                +media-max(800px)
+                    padding-top: 20px
+                +media-max(450px)
+                    padding-top: 10px
                 a 
                     text-decoration: none
                     font-family: $text
