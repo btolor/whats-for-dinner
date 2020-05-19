@@ -1,59 +1,121 @@
 // Start of the main jquery function...
 $(() => {
     /**Application Variables... */
-    // API endpoint url...
-    let api_end_poit = ""
-    // Items input variables...
+    // Stores the API endpoint url...
+    let api_end_point = "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i="
+    // Stores the items input...
     let item_1, item_2, item_3, item_4
-    // Dish type input variable...
+    // Stores the dish type input...
     let dish = ""
-    // Dish type search variable...
+    // Stores the dish type search...
     let dishSearch = ""
-    // GET request serch variable...
+    // Stores the GET request serch...
     let ingredients = ""
+    // Stores the search page number...
+    let pageNum = "&p=1";
 
-    $('#sub-btn').click(()=>{ 
-        alert('worked')
-        
+    /**Calls the jquery click method on the html element with an id of 
+     * page-1. When the html element is clicked, a click function changes 
+     * the value of the pageNum variable to an integer of 1... 
+     * */
+    $('#page-1').click(()=> { 
+        // Changes the pageNum variable value...
+        pageNum = "&p=1";
     })
 
-    ingredient1 = $('#item1').val()
-    ingredient2 = $('#item2').val()
-    ingredient3 = $('#item3').val()
-    ingredient4 = $('#item4').val()
-    foodDish = $('#dish').val()
+    /**Calls the jquery click method on the html element with an id of 
+     * page-2. When the html element is clicked, a click function changes 
+     * the value of the pageNum variable to an integer of 2... 
+     * */
+    $('#page-2').click(()=> { 
+        // Changes the pageNum variable value...
+        pageNum = "&p=2";
+    })
 
-    // if (ingredient1 != "") {
-    //     ingredients = ingredient1;
-    // }
-    // if (ingredient2 != "") {
-    //     ingredients = ingredients + "," + ingredient2;
-    // }
-    // if (ingredient3 != "") {
-    //     ingredients = ingredients + "," + ingredient3;
-    // }
-    // if (ingredient4 != "") {
-    //     ingredients = ingredients + "," + ingredient4;
-    // }
-    // if (foodDish != "") {
-    //     dishSearch = "&q=" + foodDish;
-    // } else {
-    //     dishSearch = "";
-    // }
+    /**Calls the jquery click method on the html element with an id of 
+     * page-3. When the html element is clicked, a click function changes 
+     * the value of the pageNum variable to an integer of 3... 
+     * */
+    $('#page-3').click(()=> { 
+        // Changes the pageNum variable value...
+        pageNum = "&p=3";
+    })
 
-    // let request = $.ajax({
-    //     // Stores the GET request url...
-    //     url: searchSubBreedRequest,
-    //     // Stores the request method type...
-    //     method: "GET",
-    //     // Stores the erroe fallback function that takes in three parameters...
-    //     error: (xhr, ajaxOptions, thrownError) => {
-    //         /**If Else statement that checks the value of the GET request xhr 
-    //          * status and returns either true or false. 
-    //          * */
-    //         if (xhr.status == 404) { }
-    //     }
-    // })
+    /**Calls the jquery click method on the html element with an id of 
+     * page-4. When the html element is clicked, a click function changes 
+     * the value of the pageNum variable to an integer of 4... 
+     * */
+    $('#page-4').click(()=> { 
+        // Changes the pageNum variable value...
+        pageNum = "&p=4";
+    })
+
+    /**Calls the jquery click method on the html element with an id of 
+     * page-5. When the html element is clicked, a click function changes 
+     * the value of the pageNum variable to an integer of 5... 
+     * */
+    $('#page-5').click(()=> { 
+        // Changes the pageNum variable value...
+        pageNum = "&p=5";
+    })
+
+
+    $('#sub-btn').click(()=>{ 
+        
+        ingredient1 = $('#item-1').val()
+        ingredient2 = $('#item-2').val()
+        ingredient3 = $('#item-3').val()
+        ingredient4 = $('#item-4').val()
+        foodDish = $('#dish-type').val()
+
+
+        if (ingredient1 != "") {
+            ingredients = ingredient1;
+            console.log(ingredients)
+        }
+        if (ingredient2 != "") {
+            ingredients = ingredients + "," + ingredient2;
+            console.log(ingredients)
+        }
+        if (ingredient3 != "") {
+            ingredients = ingredients + "," + ingredient3;
+            console.log(ingredients)
+        }
+        if (ingredient4 != "") {
+            ingredients = ingredients + "," + ingredient4;
+            console.log(ingredients)
+        }
+        if (foodDish != "") {
+            dishSearch = "&q=" + foodDish;
+        } else {
+            dishSearch = "";
+        }
+
+
+        let request = $.ajax({
+            // Stores the GET request url...
+            url: api_end_point + ingredients + dishSearch + pageNum,
+            // url: "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3",
+            // Stores the request method type...
+            method: "GET",
+            // Stores the data return type...
+            dataType: 'json',
+            // Stores the erroe fallback function that takes in three parameters...
+            error: (xhr, ajaxOptions, thrownError) => {
+                /**If Else statement that checks the value of the GET request xhr 
+                 * status and returns either true or false. 
+                 * */
+                if (xhr.status == 404) { }
+            }
+        })
+
+        let response = request.done((data) => {
+            console.log(data.results)
+        })
+
+    })
+    
+
 
 
 
