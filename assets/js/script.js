@@ -21,7 +21,8 @@ $(() => {
      * method removes the active class from the html element class of page 
      * and adds the class to the element with an id of page-1 with the jquery 
      * add class method. Then the value of the pageNum variable to an integer 
-     * of 1... 
+     * of 1 and calls the search function with the pageNum variable passed in 
+     * as a parameter... 
      * */
     // Calls a click function on an html element...
     $('#page-1').click(()=> {
@@ -31,6 +32,7 @@ $(() => {
         $('#page-1').addClass('active') 
         // Changes the pageNum variable value...
         pageNum = "&p=1"
+        // Calls the search function with a parameter...
         search(pageNum)
     })
 
@@ -39,7 +41,8 @@ $(() => {
      * method removes the active class from the html element class of page 
      * and adds the class to the element with an id of page-2 with the jquery 
      * add class method. Then the value of the pageNum variable to an integer 
-     * of 2... 
+     * of 2 and calls the search function with the pageNum variable passed in 
+     * as a parameter... 
      * */
     // Calls a click function on an html element...
     $('#page-2').click(()=> {
@@ -49,6 +52,7 @@ $(() => {
         $('#page-2').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=2"
+        // Calls the search function with a parameter...
         search(pageNum)
     })
 
@@ -57,7 +61,8 @@ $(() => {
      * method removes the active class from the html element class of page 
      * and adds the class to the element with an id of page-3 with the jquery 
      * add class method. Then the value of the pageNum variable to an integer 
-     * of 3... 
+     * of 3 and calls the search function with the pageNum variable passed in 
+     * as a parameter... 
      * */
     // Calls a click function on an html element...
     $('#page-3').click(()=> { 
@@ -67,6 +72,7 @@ $(() => {
         $('#page-3').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=3"
+        // Calls the search function with a parameter...
         search(pageNum)
     })
 
@@ -75,7 +81,8 @@ $(() => {
      * method removes the active class from the html element class of page 
      * and adds the class to the element with an id of page-4 with the jquery 
      * add class method. Then the value of the pageNum variable to an integer 
-     * of 4... 
+     * of 4 and calls the search function with the pageNum variable passed in 
+     * as a parameter... 
      * */
     // Calls a click function on an html element...
     $('#page-4').click(()=> { 
@@ -85,6 +92,7 @@ $(() => {
         $('#page-4').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=4"
+        // Calls a search function with a parameter...
         search(pageNum)
     })
 
@@ -93,7 +101,8 @@ $(() => {
      * method removes the active class from the html element class of page 
      * and adds the class to the element with an id of page-5 with the jquery 
      * add class method. Then the value of the pageNum variable to an integer 
-     * of 5... 
+     * of 5 and calls the search function with the pageNum variable passed in 
+     * as a parameter... 
      * */
     // Calls a click function on an html element...
     $('#page-5').click(()=> { 
@@ -103,8 +112,37 @@ $(() => {
         $('#page-5').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=5"
+        // Calls the search function with a parameter...
         search(pageNum)
     })
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    /**Need to finsih comments for the serach and initSearch functions and create 404 error displays, run audit and make corrections */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     let search = (page)=>{
@@ -189,28 +227,6 @@ $(() => {
 
     }
 
-    /**############################################################################################################# */
-    // Search GET Request...
-    $('#sub-btn').click(()=>{ 
-        // Uses the jquery remove class method to remove a class...
-        $('.page').removeClass('active')
-        // Uses the jquery remove class method to remove a class...
-        $('#page-1').addClass('active') 
-        // Changes the pageNum variable value...
-        pageNum = "&p=1"
-        search(pageNum)
-    })
-    /**############################################################################################################# */
-
-    let image = (pic)=>{
-        if(pic === ""){
-            return "http://img.recipepuppy.com/9.jpg"
-        }else{
-            return pic
-        }
-    }
-
-
     let initSearch = ()=>{
         let request = $.ajax({
             // Stores the GET request url...
@@ -234,13 +250,13 @@ $(() => {
         let response = request.done((data) => {
             // Saves the GET request data in the recipes variable...
             recipes = data.results
-
+            // Calls the remove method to remove the selected element...
             $('.recipe').remove()
-
-            recipes.forEach((recipe)=> {
-                
-                // title,ingredients,href,thumbnail...
+            // Calls the for each loop function on the recipes array...
+            recipes.forEach((recipe)=> {    
+                // Calls the append method to add a code block to the selected html element...
                 $('.recipes').append(
+                    // Creates the html recipe code block...
                     " <!-- start of recipe --><div class='card recipe'><!-- start of credit -->" +
                     "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
                     "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
@@ -262,35 +278,82 @@ $(() => {
             })
         })
     }
+
+    /**############################################################################################################# */
+    // Search GET Request...
+    /**Calls the click method on the html element with an id of sub-btn 
+     * to use the remove class method to remove the active class from the 
+     * html element with a class of page. Next, it uses the add class
+     * method add the class of active to the html element with the id of 
+     * page-1. Finally it changes the value of the pageNum variable and 
+     * calls the search function with the pageNum variable passed in as a 
+     * parameter... 
+     * */
+    // Calls the click function on an html element...
+    $('#sub-btn').click(()=>{ 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-1').addClass('active') 
+        // Changes the pageNum variable value...
+        pageNum = "&p=1"
+        // Calls the searh function with a parameter...
+        search(pageNum)
+    })
+    /**############################################################################################################# */
+
+    /**The image function takes in a parameter that is used in an 
+     * if/else statement to check its value. If the value of the 
+     * parameter is equal to an empty string, the default thumbnail
+     * image location is returned. If the parameter's value is not 
+     * equal to an empty string, the value of the parameter in then 
+     * returned... 
+     * */
+    // Stores the image function...
+    let image = (pic)=>{
+        // If statement to check the value of the parameter...
+        if(pic === ""){
+            // If True:
+            // Returns an image url locatio...
+            return "http://img.recipepuppy.com/9.jpg"
+        }else{
+            // If False: 
+            // Returns the value of the parameter...
+            return pic
+        }
+    }
+
     
 
     /**############################################################################################################# */
-    // Initial GET Request...
+    // Stores the initial GET request function...
     let init = ()=>{
+        // Calls the initial seacrh function...
         initSearch()
     }
+    // Calls the initial function...
+    init()
     /**############################################################################################################# */
 
-
-    init()
-
+    
 
 
+    /**Calls the click method on the html elements with id of logo-img and 
+     * the class of logo-title. When either are clicked the remove class 
+     * method is used to remove the class of active from the html element 
+     * with the class of page. Next the add class method is used to add the 
+     * class of active to the html element with the id of page-1. Finally the 
+     * the initSeacrh function is called...
+     * */
+    // Calls the click function on the two html elements...
     $('#logo-img, .logo-title').click(()=> { 
         // Uses the jquery remove class method to remove a class...
         $('.page').removeClass('active')
         // Uses the jquery remove class method to remove a class...
         $('#page-1').addClass('active') 
+        // Calls the initSearch function...
         initSearch()
     })
-
-
-
-
-    
-    
-
-
 
     /**The landingImages variable stores and array of background images for the 
      * html element with the class of landing...  
