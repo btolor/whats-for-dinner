@@ -31,6 +31,7 @@ $(() => {
         $('#page-1').addClass('active') 
         // Changes the pageNum variable value...
         pageNum = "&p=1"
+        search(pageNum)
     })
 
     /**Calls the jquery click method on the html element with an id of 
@@ -48,6 +49,7 @@ $(() => {
         $('#page-2').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=2"
+        search(pageNum)
     })
 
     /**Calls the jquery click method on the html element with an id of 
@@ -65,6 +67,7 @@ $(() => {
         $('#page-3').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=3"
+        search(pageNum)
     })
 
     /**Calls the jquery click method on the html element with an id of 
@@ -82,6 +85,7 @@ $(() => {
         $('#page-4').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=4"
+        search(pageNum)
     })
 
     /**Calls the jquery click method on the html element with an id of 
@@ -99,11 +103,12 @@ $(() => {
         $('#page-5').addClass('active')  
         // Changes the pageNum variable value...
         pageNum = "&p=5"
+        search(pageNum)
     })
 
 
-    $('#sub-btn').click(()=>{ 
-        
+    let search = (page)=>{
+
         ingredient1 = $('#item-1').val()
         ingredient2 = $('#item-2').val()
         ingredient3 = $('#item-3').val()
@@ -137,7 +142,6 @@ $(() => {
         let request = $.ajax({
             // Stores the GET request url...
             url: api_end_point + ingredients + dishSearch + pageNum,
-            // url: "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3",
             // Stores the request method type...
             method: "GET",
             // Stores the data return type...
@@ -183,7 +187,20 @@ $(() => {
             })
         })
 
+    }
+
+    /**############################################################################################################# */
+    // Search GET Request...
+    $('#sub-btn').click(()=>{ 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-1').addClass('active') 
+        // Changes the pageNum variable value...
+        pageNum = "&p=1"
+        search(pageNum)
     })
+    /**############################################################################################################# */
 
     let image = (pic)=>{
         if(pic === ""){
@@ -192,13 +209,12 @@ $(() => {
             return pic
         }
     }
-    
 
-    let init = ()=>{
 
+    let initSearch = ()=>{
         let request = $.ajax({
             // Stores the GET request url...
-            url: "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=chicken,garlic powder,broccoli,worcestershire sauce&p=1",
+            url: "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?&p=1",
             // Stores the request method type...
             method: "GET",
             // Stores the data return type...
@@ -245,11 +261,33 @@ $(() => {
                 
             })
         })
-
     }
+    
+
+    /**############################################################################################################# */
+    // Initial GET Request...
+    let init = ()=>{
+        initSearch()
+    }
+    /**############################################################################################################# */
+
 
     init()
 
+
+
+    $('#logo-img, .logo-title').click(()=> { 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-1').addClass('active') 
+        initSearch()
+    })
+
+
+
+
+    
     
 
 
