@@ -188,6 +188,7 @@
 }
 
 .content .bg-layer .grid .recipes .recipe .info .heading #title {
+  padding: 0 8px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

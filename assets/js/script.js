@@ -3,6 +3,8 @@ $(() => {
     /**Application Variables... */
     // Stores the API endpoint url...
     let api_end_point = "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i="
+    // Stores the GET request data results...
+    let recipes = ""
     // Stores the items input...
     let item_1, item_2, item_3, item_4
     // Stores the dish type input...
@@ -12,51 +14,91 @@ $(() => {
     // Stores the GET request serch...
     let ingredients = ""
     // Stores the search page number...
-    let pageNum = "&p=1";
+    let pageNum = "&p=1"
 
     /**Calls the jquery click method on the html element with an id of 
-     * page-1. When the html element is clicked, a click function changes 
-     * the value of the pageNum variable to an integer of 1... 
+     * page-1. When the html element is clicked, the jquery remove class 
+     * method removes the active class from the html element class of page 
+     * and adds the class to the element with an id of page-1 with the jquery 
+     * add class method. Then the value of the pageNum variable to an integer 
+     * of 1... 
      * */
-    $('#page-1').click(()=> { 
+    // Calls a click function on an html element...
+    $('#page-1').click(()=> {
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-1').addClass('active') 
         // Changes the pageNum variable value...
-        pageNum = "&p=1";
+        pageNum = "&p=1"
     })
 
     /**Calls the jquery click method on the html element with an id of 
-     * page-2. When the html element is clicked, a click function changes 
-     * the value of the pageNum variable to an integer of 2... 
+     * page-2. When the html element is clicked, the jquery remove class 
+     * method removes the active class from the html element class of page 
+     * and adds the class to the element with an id of page-2 with the jquery 
+     * add class method. Then the value of the pageNum variable to an integer 
+     * of 2... 
      * */
-    $('#page-2').click(()=> { 
+    // Calls a click function on an html element...
+    $('#page-2').click(()=> {
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-2').addClass('active')  
         // Changes the pageNum variable value...
-        pageNum = "&p=2";
+        pageNum = "&p=2"
     })
 
     /**Calls the jquery click method on the html element with an id of 
-     * page-3. When the html element is clicked, a click function changes 
-     * the value of the pageNum variable to an integer of 3... 
+     * page-3. When the html element is clicked, the jquery remove class 
+     * method removes the active class from the html element class of page 
+     * and adds the class to the element with an id of page-3 with the jquery 
+     * add class method. Then the value of the pageNum variable to an integer 
+     * of 3... 
      * */
+    // Calls a click function on an html element...
     $('#page-3').click(()=> { 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-3').addClass('active')  
         // Changes the pageNum variable value...
-        pageNum = "&p=3";
+        pageNum = "&p=3"
     })
 
     /**Calls the jquery click method on the html element with an id of 
-     * page-4. When the html element is clicked, a click function changes 
-     * the value of the pageNum variable to an integer of 4... 
+     * page-4. When the html element is clicked, the jquery remove class 
+     * method removes the active class from the html element class of page 
+     * and adds the class to the element with an id of page-4 with the jquery 
+     * add class method. Then the value of the pageNum variable to an integer 
+     * of 4... 
      * */
+    // Calls a click function on an html element...
     $('#page-4').click(()=> { 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-4').addClass('active')  
         // Changes the pageNum variable value...
-        pageNum = "&p=4";
+        pageNum = "&p=4"
     })
 
     /**Calls the jquery click method on the html element with an id of 
-     * page-5. When the html element is clicked, a click function changes 
-     * the value of the pageNum variable to an integer of 5... 
+     * page-5. When the html element is clicked, the jquery remove class 
+     * method removes the active class from the html element class of page 
+     * and adds the class to the element with an id of page-5 with the jquery 
+     * add class method. Then the value of the pageNum variable to an integer 
+     * of 5... 
      * */
+    // Calls a click function on an html element...
     $('#page-5').click(()=> { 
+        // Uses the jquery remove class method to remove a class...
+        $('.page').removeClass('active')
+        // Uses the jquery remove class method to remove a class...
+        $('#page-5').addClass('active')  
         // Changes the pageNum variable value...
-        pageNum = "&p=5";
+        pageNum = "&p=5"
     })
 
 
@@ -74,21 +116,21 @@ $(() => {
             console.log(ingredients)
         }
         if (ingredient2 != "") {
-            ingredients = ingredients + "," + ingredient2;
+            ingredients = ingredients + "," + ingredient2
             console.log(ingredients)
         }
         if (ingredient3 != "") {
-            ingredients = ingredients + "," + ingredient3;
+            ingredients = ingredients + "," + ingredient3
             console.log(ingredients)
         }
         if (ingredient4 != "") {
-            ingredients = ingredients + "," + ingredient4;
+            ingredients = ingredients + "," + ingredient4
             console.log(ingredients)
         }
         if (foodDish != "") {
-            dishSearch = "&q=" + foodDish;
+            dishSearch = "&q=" + foodDish
         } else {
-            dishSearch = "";
+            dishSearch = ""
         }
 
 
@@ -105,17 +147,110 @@ $(() => {
                 /**If Else statement that checks the value of the GET request xhr 
                  * status and returns either true or false. 
                  * */
-                if (xhr.status == 404) { }
+                if (xhr.status == 404) {
+
+                }
             }
         })
 
         let response = request.done((data) => {
-            console.log(data.results)
+            // Saves the GET request data in the recipes variable...
+            recipes = data.results
+
+            $('.recipe').remove()
+
+            recipes.forEach((recipe)=> {
+                // title,ingredients,href,thumbnail...
+                $('.recipes').append(
+                    " <!-- start of recipe --><div class='card recipe'><!-- start of credit -->" +
+                    "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
+                    "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
+                    "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
+                    "<a href='" + recipe.href + "' id='title' target='_blank'>" + recipe.title + "</a>"+
+                    "</div><!-- end of heading --><hr><p id='ingredients'>"+
+                    recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
+                    "<!-- start of share-links --><div class='share-links'><!-- Facebook Share link -->" +
+                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + "' target='+blank'>"+
+                    "<i class='fa fa-facebook' aria-hidden='true'></i></a><!-- Twitter Share link -->"+
+                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' target='+blank'>"+
+                    "<i class='fa fa-twitter' aria-hidden='true'></i></a><!-- Email Share link -->"+
+                    "<a href='mailto:?body=" + recipe.href + "' target='_blank'>"+
+                    "<i class='fa fa-envelope' aria-hidden='true'></i></a></div><!-- end of share-links -->"+
+                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + ">Recipe</a>"+
+                    "</div><!-- end of btns --></div><!-- end of info --></div><!-- end of recipe --> "
+                )
+                
+            })
         })
 
     })
+
+    let image = (pic)=>{
+        if(pic === ""){
+            return "http://img.recipepuppy.com/9.jpg"
+        }else{
+            return pic
+        }
+    }
     
 
+    let init = ()=>{
+
+        let request = $.ajax({
+            // Stores the GET request url...
+            url: "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/?i=chicken,garlic powder,broccoli,worcestershire sauce&p=1",
+            // Stores the request method type...
+            method: "GET",
+            // Stores the data return type...
+            dataType: 'json',
+            // Stores the erroe fallback function that takes in three parameters...
+            error: (xhr, ajaxOptions, thrownError) => {
+                /**If Else statement that checks the value of the GET request xhr 
+                 * status and returns either true or false. 
+                 * */
+                if (xhr.status == 404) {
+
+                }
+            }
+        })
+
+
+        let response = request.done((data) => {
+            // Saves the GET request data in the recipes variable...
+            recipes = data.results
+
+            $('.recipe').remove()
+
+            recipes.forEach((recipe)=> {
+                
+                // title,ingredients,href,thumbnail...
+                $('.recipes').append(
+                    " <!-- start of recipe --><div class='card recipe'><!-- start of credit -->" +
+                    "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
+                    "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
+                    "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
+                    "<a href='" + recipe.href + "' id='title' target='_blank'>" + recipe.title + "</a>"+
+                    "</div><!-- end of heading --><hr><p id='ingredients'>"+
+                    recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
+                    "<!-- start of share-links --><div class='share-links'><!-- Facebook Share link -->" +
+                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + "' target='+blank'>"+
+                    "<i class='fa fa-facebook' aria-hidden='true'></i></a><!-- Twitter Share link -->"+
+                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' target='+blank'>"+
+                    "<i class='fa fa-twitter' aria-hidden='true'></i></a><!-- Email Share link -->"+
+                    "<a href='mailto:?body=" + recipe.href + "' target='_blank'>"+
+                    "<i class='fa fa-envelope' aria-hidden='true'></i></a></div><!-- end of share-links -->"+
+                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + ">Recipe</a>"+
+                    "</div><!-- end of btns --></div><!-- end of info --></div><!-- end of recipe --> "
+                )
+                
+            })
+        })
+
+    }
+
+    init()
+
+    
 
 
 
