@@ -4,3 +4,5 @@
 @import "landing.css";
 /* CSS for the recipe-content section... */
 @import "recipe-content.css";
+/* CSS for the error section... */
+@import "error.css";

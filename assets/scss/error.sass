@@ -1,0 +1,71 @@
+/* Import the mixins collection file... */
+@import mixins 
+/* Variables... */
+// Fonts...
+$sub-title: 'Josefin Slab', serif
+$logo-headers: 'Niconne', cursive
+$text: 'Open Sans', sans-serif
+// Colors... 
+$orange : #FF652F
+$hover-orange: #e63d00
+$text-color: #272727
+.api-error
+    display: none
+    padding: 46px 0
+    .error
+        background-image: url("/assets/images/chef-preparing-vegetable-dish-on-tree-slab-1267320.jpg")
+        background-size: 100% 100%
+        border-radius: 8px
+        +center(45%, 0 auto)
+        padding: 36px
+        -moz-box-shadow: 0 8px 6px -6px $text-color
+        -webkit-box-shadow: 0 8px 6px -6px $text-color
+        box-shadow: 0 8px 6px -6px $text-color
+        +media-max(650px)
+            width: 75%
+            padding: 26px
+        +media-max(400px)
+            width: 90%
+        .error-message 
+            +flex(flex,column)
+            align-items: center
+            border: 3px solid $orange
+            padding: 80px 30px
+            background: rgba(255, 255, 255, .8)
+            +media-max(650px)
+                padding: 60px 20px
+            h3 
+                font-family: $sub-title 
+                font-weight: 800
+                font-size: 100px
+                color: $orange
+                +media-max(850px)
+                    font-size: 80px
+                +media-max(650px)
+                    font-size: 60px
+            h2
+                font-family: $sub-title 
+                font-weight: 800
+                font-size: 46px
+                color: $orange
+                text-transform: uppercase
+                padding: 15px 0 24px
+                +media-max(850px)
+                    font-size: 36px
+                +media-max(850px)
+                    font-size: 26px
+                +media-max(400px)
+                    padding: 8px 0 12px
+            p
+                font-family: $text 
+                font-size: 18px
+                font-weight: 800 
+                font-style: italic
+                text-align: center
+                color: $orange
+                text-transform: uppercase
+                +media-max(850px)
+                    font-size: 16px
+                    font-weight: 700
+                +media-max(650px)
+                    font-size: 14px
