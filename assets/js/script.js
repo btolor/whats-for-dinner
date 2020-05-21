@@ -265,17 +265,19 @@ $(() => {
                     "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
                     "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
                     "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
-                    "<a href='" + recipe.href + "' id='title' target='_blank'>" + recipe.title + "</a>"+
-                    "</div><!-- end of heading --><hr><p id='ingredients'>"+
+                    "<a href='" + recipe.href + "' aria-label='"+ recipe.href +"' rel='noopener' id='title' target='_blank'>" + 
+                    recipe.title + "</a>" + "</div><!-- end of heading --><hr><p class='ingredients'>"+
                     recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
                     "<!-- start of share-links --><div class='share-links'><!-- Facebook Share link -->" +
-                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + "' target='+blank'>"+
+                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + 
+                    "' aria-label='https://www.facebook.com/sharer/sharer.php?u="+ recipe.href +"' rel='noopener' target='+blank'>"+
                     "<i class='fa fa-facebook' aria-hidden='true'></i></a><!-- Twitter Share link -->"+
-                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' target='+blank'>"+
+                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' aria-label='https://twitter.com/intent/tweet?text="+ 
+                    recipe.href +"' rel='noopener' target='+blank'>"+
                     "<i class='fa fa-twitter' aria-hidden='true'></i></a><!-- Email Share link -->"+
-                    "<a href='mailto:?body=" + recipe.href + "' target='_blank'>"+
+                    "<a href='mailto:?body=" + recipe.href + "' aria-label='mailto:?body="+ recipe.href +"' rel='noopener' target='_blank'>"+
                     "<i class='fa fa-envelope' aria-hidden='true'></i></a></div><!-- end of share-links -->"+
-                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + ">Recipe</a>"+
+                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + "  aria-label='"+ recipe.href +"' rel='noopener'>Recipe</a>"+
                     "</div><!-- end of btns --></div><!-- end of info --></div><!-- end of recipe --> "
                 )
                 
@@ -393,17 +395,19 @@ $(() => {
                     "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
                     "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
                     "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
-                    "<a href='" + recipe.href + "' id='title' target='_blank'>" + recipe.title + "</a>"+
-                    "</div><!-- end of heading --><hr><p id='ingredients'>"+
+                    "<a href='" + recipe.href + "' aria-label='"+ recipe.href +"' rel='noopener' id='title' target='_blank'>" + 
+                    recipe.title + "</a>" + "</div><!-- end of heading --><hr><p class='ingredients'>"+
                     recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
                     "<!-- start of share-links --><div class='share-links'><!-- Facebook Share link -->" +
-                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + "' target='+blank'>"+
+                    "<a href='https://www.facebook.com/sharer/sharer.php?u=" + recipe.href + 
+                    "' aria-label='https://www.facebook.com/sharer/sharer.php?u="+ recipe.href +"' rel='noopener' target='+blank'>"+
                     "<i class='fa fa-facebook' aria-hidden='true'></i></a><!-- Twitter Share link -->"+
-                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' target='+blank'>"+
+                    "<a href='https://twitter.com/intent/tweet?text=" + recipe.href + "' aria-label='https://twitter.com/intent/tweet?text="+ 
+                    recipe.href +"' rel='noopener' target='+blank'>"+
                     "<i class='fa fa-twitter' aria-hidden='true'></i></a><!-- Email Share link -->"+
-                    "<a href='mailto:?body=" + recipe.href + "' target='_blank'>"+
+                    "<a href='mailto:?body=" + recipe.href + "' aria-label='mailto:?body="+ recipe.href +"' rel='noopener' target='_blank'>"+
                     "<i class='fa fa-envelope' aria-hidden='true'></i></a></div><!-- end of share-links -->"+
-                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + ">Recipe</a>"+
+                    "<a id='recipe-btn' target='_blank' href=" + recipe.href + "  aria-label='"+ recipe.href +"' rel='noopener'>Recipe</a>"+
                     "</div><!-- end of btns --></div><!-- end of info --></div><!-- end of recipe --> "
                 )
                 
