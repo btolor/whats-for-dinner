@@ -105,7 +105,7 @@ body header .grid .scrolled-header {
           justify-content: space-between;
 }
 
-body header .grid .scrolled-header .logo {
+body header .grid .scrolled-header .logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,26 +115,26 @@ body header .grid .scrolled-header .logo {
           flex-direction: row;
 }
 
-body header .grid .scrolled-header .logo img {
+body header .grid .scrolled-header .logo a img {
   width: 60px;
   padding-right: 12px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 860px) {
-  body header .grid .scrolled-header .logo img {
+  body header .grid .scrolled-header .logo a img {
     width: 50px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  body header .grid .scrolled-header .logo img {
+  body header .grid .scrolled-header .logo a img {
     width: 42px;
     padding-right: 8px;
   }
 }
 
-body header .grid .scrolled-header .logo h1 {
+body header .grid .scrolled-header .logo a h1 {
   color: white;
   font-family: "Niconne", cursive;
   font-size: 38px;
@@ -146,13 +146,13 @@ body header .grid .scrolled-header .logo h1 {
 }
 
 @media screen and (max-width: 860px) {
-  body header .grid .scrolled-header .logo h1 {
+  body header .grid .scrolled-header .logo a h1 {
     font-size: 32px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  body header .grid .scrolled-header .logo h1 {
+  body header .grid .scrolled-header .logo a h1 {
     font-size: 28px;
   }
 }

@@ -53,27 +53,28 @@ body
                 padding: 16px 0 8px
                 +fullFlex(none,row,space-between)
                 .logo 
-                    +flex(flex,row)
-                    img 
-                        width: 60px
-                        padding-right: 12px
-                        cursor: pointer
-                        +media-max(860px)
-                            width: 50px
-                        +media-max(650px)
-                            width: 42px
-                            padding-right: 8px
-                    h1 
-                        color: white 
-                        font-family: $logo-headers
-                        font-size: 38px 
-                        align-self: center
-                        margin-bottom: 0
-                        cursor: pointer
-                        +media-max(860px)
-                            font-size: 32px
-                        +media-max(650px)
-                            font-size: 28px
+                    a
+                        +flex(flex,row)
+                        img 
+                            width: 60px
+                            padding-right: 12px
+                            cursor: pointer
+                            +media-max(860px)
+                                width: 50px
+                            +media-max(650px)
+                                width: 42px
+                                padding-right: 8px
+                        h1 
+                            color: white 
+                            font-family: $logo-headers
+                            font-size: 38px 
+                            align-self: center
+                            margin-bottom: 0
+                            cursor: pointer
+                            +media-max(860px)
+                                font-size: 32px
+                            +media-max(650px)
+                                font-size: 28px
                 .links
                     +fullFlex(flex,row,flex-end)
                     p 

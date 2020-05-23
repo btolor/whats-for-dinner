@@ -281,7 +281,7 @@ $(() => {
                     " <!-- start of recipe --><div class='card recipe'><!-- start of credit -->" +
                     "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
                     "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
-                    "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
+                    "<img src='"+ image(recipe.thumbnail) +"' loading='lazy' alt='This is the image of recipe's card dish.'>" +
                     "<a href='" + recipe.href + "' aria-label='"+ recipe.href +"' rel='noopener' id='title' target='_blank'>" + 
                     recipe.title + "</a>" + "</div><!-- end of heading --><hr><p class='ingredients'>"+
                     recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
@@ -411,7 +411,7 @@ $(() => {
                     " <!-- start of recipe --><div class='card recipe'><!-- start of credit -->" +
                     "<div class='credit'><h4>Powered By Recipe Puppy API</h4></div><!-- end of credit -->" +
                     "<!-- start of info --><div class='info'><!-- start of heading --><div class='heading'>" +
-                    "<img src='"+ image(recipe.thumbnail) +"' alt='This is the image of recipe's card dish.'>" +
+                    "<img src='"+ image(recipe.thumbnail) +"' loading='lazy' alt='This is the image of recipe's card dish.'>" +
                     "<a href='" + recipe.href + "' aria-label='"+ recipe.href +"' rel='noopener' id='title' target='_blank'>" + 
                     recipe.title + "</a>" + "</div><!-- end of heading --><hr><p class='ingredients'>"+
                     recipe.ingredients + "</p><hr><!-- start of btns --><div class='btns'>" +
@@ -558,15 +558,14 @@ $(() => {
         search(pageNum)
     })
 
-    /**Calls the click method on the html elements with id of logo-img and 
-     * the class of logo-title. When either are clicked the remove class 
-     * method is used to remove the class of active from the html element 
-     * with the class of page. Next the add class method is used to add the 
-     * class of active to the html element with the id of page-1. Finally the 
-     * the initSeacrh function is called...
+    /**Calls the click method on the html elements with id of logo-link. When 
+     * either are clicked the remove class method is used to remove the class 
+     * of active from the html element with the class of page. Next the add class 
+     * method is used to add the class of active to the html element with the id 
+     * of page-1. Finally the the initSeacrh function is called...
      * */
     // Calls the click function on the two html elements...
-    $('#logo-img, .logo-title').click(()=> { 
+    $('#logo-link').click(()=> { 
         // Uses the jquery remove class method to remove a class...
         $('.page').removeClass('active')
         // Uses the jquery remove class method to remove a class...
