@@ -1,7 +1,7 @@
 /* Import the mixins collection file... */
 /* Variables... */
 .landing {
-  background-image: url("/assets/images/slides/chocolates-and-raspberries-918327.jpg");
+  background-image: url("https://i.postimg.cc/15bzFY2B/chocolates-and-raspberries-background.jpg");
   background-size: 100% 100%;
   background-color: black;
   -webkit-transition: .4s;

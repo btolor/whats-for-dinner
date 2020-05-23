@@ -22,25 +22,42 @@ $(() => {
     /**The landingImages variable stores and array of background images for the 
      * html element with the class of landing...  
      * */
+    // let landingImages = [
+    //     'assets/images/slides/close-up-cold-color-drop-background.jpg',
+    //     'assets/images/slides/cook-cooking-cuisine-delicious-background.jpg',
+    //     'assets/images/slides/five-white-plates-with-different-kinds-of-dishes-background.jpg',
+    //     '/assets/images/slides/food-on-table-background.jpg',
+    //     'assets/images/slides/shallow-focus-photography-of-chocolate-cupcakes-background.jpg',
+    //     '/assets/images/slides/chocolates-and-raspberries-background.jpg'
+    // ]
     let landingImages = [
-        'assets/images/slides/close-up-cold-color-drop-372882.jpg',
-        'assets/images/slides/cook-cooking-cuisine-delicious-357737.jpg',
-        'assets/images/slides/five-white-plates-with-different-kinds-of-dishes-54455.jpg',
-        '/assets/images/slides/food-on-table-326278.jpg',
-        'assets/images/slides/shallow-focus-photography-of-chocolate-cupcakes-1028714.jpg',
-        '/assets/images/slides/chocolates-and-raspberries-918327.jpg'
+        'https://i.postimg.cc/kM1GJ5yk/close-up-cold-color-drop-background.jpg',
+        'https://i.postimg.cc/DZffFV4v/cook-cooking-cuisine-delicious-background.jpg',
+        'https://i.postimg.cc/JzJz55WL/five-white-plates-with-different-kinds-of-dishes-background.jpg',
+        'https://i.postimg.cc/nzdFhdqv/food-on-table-background.jpg',
+        'https://i.postimg.cc/158tfZC4/shallow-focus-photography-of-chocolate-cupcakes-background.jpg',
+        'https://i.postimg.cc/15bzFY2B/chocolates-and-raspberries-background.jpg'
     ]
     /**The contentImages variable stores and array of background images for the 
      * html element with the class of content...  
      * */
+    // let contentImages = [
+    //     'assets/images/content-slides/egg-avocado-cooking-tomato-background.jpg',
+    //     'assets/images/content-slides/food-on-white-background.jpg',
+    //     'assets/images/content-slides/fruits-eating-food-on-wood-background.jpg',
+    //     'assets/images/content-slides/lunch-table-background.jpg',
+    //     'assets/images/content-slides/photo-of-vegetable-salad-in-bowls-background.jpg',
+    //     'assets/images/content-slides/variety-of-vegetables-background.jpg',
+    //     'assets/images/content-slides/vegetables-and-tomatoes-on-cutting-board-background.jpg'
+    // ]
     let contentImages = [
-        'assets/images/content-slides/egg-avocado-cooking-tomato-106877.jpg',
-        'assets/images/content-slides/food-on-white-background-256318.jpg',
-        'assets/images/content-slides/fruits-eating-food-on-wood-326268.jpg',
-        'assets/images/content-slides/lunch-table-5929.jpg',
-        'assets/images/content-slides/photo-of-vegetable-salad-in-bowls-1640770.jpg',
-        'assets/images/content-slides/variety-of-vegetables-1400172.jpg',
-        'assets/images/content-slides/vegetables-and-tomatoes-on-cutting-board-255501.jpg'
+        'https://i.postimg.cc/g0mmq9DV/egg-avocado-cooking-tomato-background.jpg',
+        'https://i.postimg.cc/TP0Gtk7Z/food-on-white-background.jpg',
+        'https://i.postimg.cc/dtCYbQNR/fruits-eating-food-on-wood-background.jpg',
+        'https://i.postimg.cc/3RwhVgzW/lunch-table-background.jpg',
+        'https://i.postimg.cc/j5kTbDrc/photo-of-vegetable-salad-in-bowls-background.jpg',
+        'https://i.postimg.cc/VvxcJ2vb/variety-of-vegetables-background.jpg',
+        'https://i.postimg.cc/XqGb7njb/vegetables-and-tomatoes-on-cutting-board-background.jpg'
     ]
 
     /**  Functions...  */

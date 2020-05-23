@@ -8,3 +8,20 @@ $text: 'Open Sans', sans-serif;
 ColorS: 
 $orange : #FF652F
 $text-color: #272727
+
+Images:
+https://i.postimg.cc/C1w51BXV/404-error-background.jpg
+https://i.postimg.cc/FKy1NgPZ/logo-image.png
+https://i.postimg.cc/15bzFY2B/chocolates-and-raspberries-background.jpg
+https://i.postimg.cc/kM1GJ5yk/close-up-cold-color-drop-background.jpg
+https://i.postimg.cc/DZffFV4v/cook-cooking-cuisine-delicious-background.jpg
+https://i.postimg.cc/JzJz55WL/five-white-plates-with-different-kinds-of-dishes-background.jpg
+https://i.postimg.cc/nzdFhdqv/food-on-table-background.jpg
+https://i.postimg.cc/158tfZC4/shallow-focus-photography-of-chocolate-cupcakes-background.jpg
+https://i.postimg.cc/g0mmq9DV/egg-avocado-cooking-tomato-background.jpg
+https://i.postimg.cc/TP0Gtk7Z/food-on-white-background.jpg
+https://i.postimg.cc/dtCYbQNR/fruits-eating-food-on-wood-background.jpg
+https://i.postimg.cc/3RwhVgzW/lunch-table-background.jpg
+https://i.postimg.cc/j5kTbDrc/photo-of-vegetable-salad-in-bowls-background.jpg
+https://i.postimg.cc/VvxcJ2vb/variety-of-vegetables-background.jpg
+https://i.postimg.cc/XqGb7njb/vegetables-and-tomatoes-on-cutting-board-background.jpg
